@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                style="@style/ConsumerDetail.ItemLayout"
+                tools:ignore="ContentDescription">
+
+    <RelativeLayout
+        android:id="@+id/item_consumer_detail_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/consumer_detail_top_layout_height"
+        android:background="@color/green_light">
+
+        <ImageView
+            android:id="@+id/item_consumer_detail_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_large"
+            android:scaleType="center"
+            android:src="@drawable/ic_parking"/>
+
+        <TextView
+            android:id="@+id/item_consumer_detail_money"
+            style="@style/ListItemMoney"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin_large"
+            tools:text="$ 600"/>
+
+        <ImageView style="@style/ConsumerDetail.Wave"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/item_consumer_detail_tag"
+        style="@style/ItemText.Gray.Normal"
+        android:layout_below="@id/item_consumer_detail_top_layout"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_large"
+        android:drawablePadding="@dimen/margin_normal"
+        android:drawableStart="@drawable/ic_tag"
+        tools:text="加油费用"
+        tools:textColor="@color/green_light"/>
+
+    <TextView
+        android:id="@+id/item_consumer_detail_time"
+        style="@style/ItemText.Gray.Normal"
+        android:layout_below="@id/item_consumer_detail_tag"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_small"
+        android:drawablePadding="@dimen/margin_normal"
+        android:drawableStart="@drawable/ic_time"
+        tools:text="2016-05-23"/>
+
+    <ImageView
+        android:id="@+id/item_consumer_detail_notes_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_consumer_detail_time"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_small"
+        android:src="@drawable/ic_notes"
+        />
+
+    <TextView
+        android:id="@+id/item_consumer_detail_notes"
+        style="@style/ItemText.Gray.Normal"
+        android:layout_below="@id/item_consumer_detail_time"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_toEndOf="@id/item_consumer_detail_notes_icon"
+        />
+
+</RelativeLayout>

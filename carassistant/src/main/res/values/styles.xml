@@ -1,0 +1,221 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:windowBackground">@color/windowBackground</item>
+    </style>
+
+    <style name="CarTheme" parent="AppTheme" />
+
+    <style name="AppDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/primary_text</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="ActionbarStyle" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:titleTextStyle">@style/TitleStyle</item>
+    </style>
+    <style name="TitleStyle">
+        <item name="android:textSize">@dimen/font_large</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay"
+           parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay"
+           parent="ThemeOverlay.AppCompat.Light"/>
+
+    <style name="Dialog"
+           parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@drawable/transparent</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="ListView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:cacheColorHint">@android:color/transparent</item>
+        <item name="android:listSelector">@android:color/transparent</item>
+        <item name="android:scrollbars">none</item>
+    </style>
+    <style name="ListView.Common">
+        <item name="android:divider">@android:color/transparent</item>
+        <item name="android:dividerHeight">0dp</item>
+    </style>
+
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.1dp</item>
+        <item name="android:background">@color/divider</item>
+    </style>
+
+    <style name="ItemText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="ItemText.Black">
+        <item name="android:textColor">@color/primary_text</item>
+    </style>
+    <style name="ItemText.Black.Larger">
+        <item name="android:textSize">@dimen/font_larger</item>
+    </style>
+    <style name="ItemText.Black.Large">
+        <item name="android:textSize">@dimen/font_large</item>
+    </style>
+    <style name="ItemText.Black.Normal">
+        <item name="android:textSize">@dimen/font_normal</item>
+    </style>
+    <style name="ItemText.Black.Small">
+        <item name="android:textSize">@dimen/font_small</item>
+    </style>
+    <style name="ItemText.Gray">
+        <item name="android:textColor">@color/secondary_text</item>
+    </style>
+    <style name="ItemText.Gray.Larger">
+        <item name="android:textSize">@dimen/font_larger</item>
+    </style>
+    <style name="ItemText.Gray.Large">
+        <item name="android:textSize">@dimen/font_large</item>
+    </style>
+    <style name="ItemText.Gray.Normal">
+        <item name="android:textSize">@dimen/font_normal</item>
+    </style>
+    <style name="ItemText.Gray.Small">
+        <item name="android:textSize">@dimen/font_small</item>
+    </style>
+
+
+    <style name="ListItemTitle" parent="ItemText.Black.Large">
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    <style name="ListItemText" parent="ItemText.Gray.Normal">
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    <style name="ListItemMoney">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/font_item_money</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    <style name="ConsumerDetail"/>
+    <style name="ConsumerDetail.ItemLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/margin_normal</item>
+        <item name="android:layout_marginBottom">@dimen/margin_normal</item>
+        <item name="android:layout_marginLeft">@dimen/margin_large</item>
+        <item name="android:layout_marginRight">@dimen/margin_large</item>
+        <item name="android:paddingBottom">@dimen/margin_large</item>
+        <item name="android:background">@drawable/bg_main_item</item>
+    </style>
+    <style name="ConsumerDetail.Wave">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginBottom">-4dp</item>
+        <item name="android:background">@drawable/wave</item>
+    </style>
+    <style name="ConsumerDetail.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/margin_large</item>
+        <item name="android:layout_marginRight">@dimen/margin_large</item>
+        <item name="android:layout_marginTop">@dimen/margin_normal</item>
+        <item name="android:textCursorDrawable">@drawable/text_cursor_cyan</item>
+        <item name="android:textSize">@dimen/font_large</item>
+        <item name="android:textColorHint">@color/primary_light</item>
+    </style>
+    <style name="AddConsumerLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/margin_large</item>
+        <item name="android:layout_marginRight">@dimen/margin_large</item>
+        <item name="android:layout_marginTop">@dimen/margin_normal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <style name="Chart"/>
+    <style name="Chart.Lable">
+        <item name="android:layout_width">106dp</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:textSize">@dimen/font_large</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/colorAccent</item>
+    </style>
+    <style name="Chart.Save">
+        <item name="android:layout_width">72dp</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:textSize">@dimen/font_normal</item>
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:text">@string/chart.save</item>
+        <item name="android:gravity">center</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+    <style name="Chart.ItemLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginLeft">@dimen/margin_large</item>
+        <item name="android:layout_marginRight">@dimen/margin_large</item>
+    </style>
+    <style name="Chart.HorizontalDivider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.1dp</item>
+        <item name="android:layout_marginLeft">@dimen/margin_large</item>
+        <item name="android:layout_marginRight">@dimen/margin_large</item>
+        <item name="android:background">@color/divider_dark</item>
+    </style>
+    <style name="Chart.VerticalDivider">
+        <item name="android:layout_width">0.1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/divider_dark</item>
+    </style>
+    <style name="Chart.ItemLable">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="Chart.ItemLable.Value">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">@dimen/font_small</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/primary_light</item>
+    </style>
+    <style name="Chart.TagDivider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2dp</item>
+        <item name="android:background">@color/colorAccent</item>
+    </style>
+    <style name="About" />
+    <style name="About.ItemLable">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:textSize">@dimen/font_normal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/primary_light</item>
+        <item name="android:drawableRight">@drawable/about_item_icon</item>
+        <item name="android:background">@drawable/about_item_selector</item>
+    </style>
+
+</resources>

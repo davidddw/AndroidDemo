@@ -1,0 +1,58 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="org.cloud.carassistant">
+
+    <!-- 网络 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- 存储卡 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <!-- 录制音频 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+    <application
+        android:name=".app.CarApplication"
+        android:icon="@drawable/ic_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/CarTheme">
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:resizeableActivity="true"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+            <layout
+                android:defaultHeight="@dimen/multi_window_height"
+                android:defaultWidth="@dimen/multi_window_width"
+                android:gravity="top|end"
+                android:minHeight="@dimen/multi_window_min_height"
+                android:minWidth="@dimen/multi_window_min_width"/>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.AddConsumerActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:resizeableActivity="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <layout
+                android:defaultHeight="@dimen/multi_window_height"
+                android:defaultWidth="@dimen/multi_window_width"
+                android:gravity="top|end"
+                android:minHeight="@dimen/multi_window_min_height"
+                android:minWidth="@dimen/multi_window_min_width"/>
+        </activity>
+
+    </application>
+
+</manifest>

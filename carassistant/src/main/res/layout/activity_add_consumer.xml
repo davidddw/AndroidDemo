@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                style="@style/AddConsumerLayout"
+                android:layout_marginTop="@dimen/margin_larger">
+                <TextView
+                    style="@style/ItemText.Black.Large"
+                    android:text="@string/consumer.type.hint"/>
+
+                <com.jaredrummler.materialspinner.MaterialSpinner
+                    android:id="@+id/add_consumer_spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/font_large"
+                    app:ms_background_color="@color/windowBackground"
+                    app:ms_text_color="@color/secondary_text"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/add_consumer_fuel_layout"
+                style="@style/AddConsumerLayout">
+
+                <TextView
+                    style="@style/ItemText.Black.Large"
+                    android:text="@string/consumer.fuel.type.hint"/>
+
+                <com.jaredrummler.materialspinner.MaterialSpinner
+                    android:id="@+id/add_consumer_fuel_spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/font_large"
+                    app:ms_background_color="@color/windowBackground"
+                    app:ms_text_color="@color/secondary_text"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/AddConsumerLayout">
+
+                <TextView
+                    style="@style/ItemText.Black.Large"
+                    android:text="@string/consumer.time.hint"
+                    android:layout_width="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/add_consumer_time"
+                    style="@style/ItemText.Gray.Large"
+                    android:layout_marginBottom="@dimen/margin_normal"
+                    android:layout_marginStart="@dimen/margin_larger"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:text="@string/consumer.select.time.hint"/>
+
+            </LinearLayout>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/add_consumer_money"
+                style="@style/ConsumerDetail.EditText"
+                android:hint="@string/consumer.money.hint"
+                android:inputType="numberDecimal"
+                app:met_baseColor="@color/primary_text"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelText="@string/consumer.money"
+                app:met_maxCharacters="10"
+                app:met_primaryColor="@color/cyan_500"
+                app:met_singleLineEllipsis="true"
+                app:met_textColorHint="@color/secondary_text"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/add_consumer_unit_price"
+                style="@style/ConsumerDetail.EditText"
+                android:hint="@string/consumer.unit.price.hint"
+                android:inputType="numberDecimal"
+                app:met_baseColor="@color/primary_text"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelText="@string/consumer.unit.price"
+                app:met_maxCharacters="4"
+                app:met_primaryColor="@color/cyan_500"
+                app:met_singleLineEllipsis="true"
+                app:met_textColorHint="@color/secondary_text"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/add_consumer_current_mileage"
+                style="@style/ConsumerDetail.EditText"
+                android:hint="@string/consumer.current.mileage.hint"
+                android:inputType="number"
+                app:met_baseColor="@color/primary_text"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelText="@string/consumer.current.mileage"
+                app:met_maxCharacters="10"
+                app:met_primaryColor="@color/cyan_500"
+                app:met_singleLineEllipsis="true"
+                app:met_textColorHint="@color/secondary_text"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/add_consumer_notes"
+                style="@style/ConsumerDetail.EditText"
+                android:hint="@string/consumer.notes.hint"
+                android:maxLines="5"
+                app:met_baseColor="@color/primary_text"
+                app:met_floatingLabel="highlight"
+                app:met_maxCharacters="100"
+                app:met_primaryColor="@color/cyan_500"
+                app:met_textColorHint="@color/secondary_text"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

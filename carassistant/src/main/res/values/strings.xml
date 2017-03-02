@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">汽车助手</string>
+
+    <string name="network.error">网络异常,请检查网络连接</string>
+
+    <string name="add">添加</string>
+    <string name="update">更新</string>
+    <string name="update.dialog.title">版本更新</string>
+    <string name="no.update">当前已是最新版本</string>
+    <string name="modify">修改</string>
+    <string name="delete">删除</string>
+    <string name="delete.success">删除成功</string>
+    <string name="delete.fail">删除失败</string>
+    <string name="confirm">确认</string>
+    <string name="delete.dialog.title">友情提示</string>
+    <string name="delete.dialog.content">是否删除本条数据?</string>
+    <string name="no.data.hint">暂无数据!</string>
+    <string name="add.consumer.title">添加消费信息</string>
+    <string name="add.consumer.success">添加成功</string>
+    <string name="add.consumer.fail">添加失败</string>
+    <string name="modify.consumer.title">修改消费信息</string>
+    <string name="modify.consumer.success">修改成功</string>
+    <string name="modify.consumer.fail">修改失败</string>
+
+    <string name="total.money">总金额</string>
+
+    <string name="consumer.money">消费金额(元)</string>
+    <string name="consumer.money.hint">请输入消费金额</string>
+    <string name="consumer.unit.price">单价(元/升)</string>
+    <string name="consumer.unit.price.hint">请输入单价</string>
+    <string name="consumer.current.mileage">当前里程(公里)</string>
+    <string name="consumer.current.mileage.hint">请输入当前里程</string>
+    <string name="consumer.notes.hint">备注信息</string>
+    <string name="consumer.type.hint">消费类型:</string>
+    <string name="consumer.fuel.type.hint">加油类型:</string>
+    <string name="consumer.time.hint">消费时间:</string>
+    <string name="consumer.select.time.hint">点击选择消费时间</string>
+
+    <string name="chart.consumer.title">消费统计图</string>
+    <string name="chart.percentage.title">消费百分比</string>
+    <string name="chart.fuel.title">油耗曲线图</string>
+    <string name="chart.fuel.min.lable">最低油耗</string>
+    <string name="chart.fuel.max.lable">最高油耗</string>
+    <string name="chart.save">保存图表</string>
+    <string name="chart.save.success">图表保存成功</string>
+    <string name="chart.save.fail">图表保存失败</string>
+
+    <string name="about.update">检查更新</string>
+    <string name="about.feedback">问题反馈</string>
+    <string name="about.author">联系作者</string>
+    <string name="about.share">应用分享</string>
+    <string name="about.thanks">Open source licenses</string>
+    <string name="about.backup">备份数据</string>
+    <string name="about.restore">恢复数据</string>
+    <string name="storage.permissions.describe">应用需要访问你的存储空间,进行日志存储</string>
+    <string name="feedback.permissions.describe">问题反馈支持语音反馈，是否允许语音录制</string>
+
+    <string name="share.title">应用分享</string>
+    <string name="share.subject">汽车助手</string>
+    <string name="share.content">汽车助手,您的生活好帮手。下载地址：https://www.pgyer.com/classic_car</string>
+
+    <string name="about.version">v %s</string>
+    <string name="author.qq">QQ:630404403</string>
+    <string name="author.wx">微信:630404403</string>
+</resources>
