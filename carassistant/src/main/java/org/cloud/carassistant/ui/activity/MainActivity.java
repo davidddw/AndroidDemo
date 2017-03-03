@@ -20,7 +20,10 @@ import org.cloud.carassistant.BuildConfig;
 import org.cloud.carassistant.R;
 import org.cloud.carassistant.consts.Consts;
 import org.cloud.carassistant.ui.base.AppBaseActivity;
+import org.cloud.carassistant.ui.fragment.AboutFragment;
 import org.cloud.carassistant.ui.fragment.MainFragment;
+import org.cloud.carassistant.ui.fragment.TimelineFragment;
+import org.cloud.carassistant.utils.PgyUtil;
 
 import java.util.List;
 
@@ -32,6 +35,8 @@ public class MainActivity extends AppBaseActivity {
     BottomBar mBottombar;
 
     private MainFragment mMainFragment;
+    private TimelineFragment mTimelineFragment;
+    private AboutFragment mAboutFragment;
     private DoubleClickExitHelper mDoubleClickExitHelper;
 
     private static final int REQUEST_CODE_STORAGE = 101;
@@ -54,6 +59,8 @@ public class MainActivity extends AppBaseActivity {
 
         checkStoragePermissions();
         initBottombar();
+        PgyUtil.register(mAppContext);
+        PgyUtil.checkUpdate(mActivity, false);
     }
 
     @AfterPermissionGranted(REQUEST_CODE_STORAGE)
@@ -112,16 +119,16 @@ public class MainActivity extends AppBaseActivity {
                         changeFragment(R.id.main_fragment_layout, mMainFragment);
                         break;
                     case R.id.tab_timeline:
-                        if (null == mMainFragment) {
-                            mMainFragment = MainFragment.newInstance();
+                        if (null == mTimelineFragment) {
+                            mTimelineFragment = TimelineFragment.newInstance();
                         }
-                        changeFragment(R.id.main_fragment_layout, mMainFragment);
+                        changeFragment(R.id.main_fragment_layout, mTimelineFragment);
                         break;
                     case R.id.tab_about:
-                        if (null == mMainFragment) {
-                            mMainFragment = MainFragment.newInstance();
+                        if (null == mAboutFragment) {
+                            mAboutFragment = AboutFragment.newInstance();
                         }
-                        changeFragment(R.id.main_fragment_layout, mMainFragment);
+                        changeFragment(R.id.main_fragment_layout, mAboutFragment);
                         break;
                 }
             }
@@ -131,6 +138,7 @@ public class MainActivity extends AppBaseActivity {
     @Override
     public void unRegister() {
         super.unRegister();
+        PgyUtil.destroy();
     }
 
     @Override

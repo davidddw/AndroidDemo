@@ -14,6 +14,8 @@ public class DateUtil {
 
     public static final String FORMAT_DATE      = "yyyy-MM-dd";
 
+    public static final String FORMAT_TIME      = "HH:mm";
+
     public static String formatDate(String format, Long time) {
         return formatDate(new SimpleDateFormat(format, Locale.CHINA), time);
     }
