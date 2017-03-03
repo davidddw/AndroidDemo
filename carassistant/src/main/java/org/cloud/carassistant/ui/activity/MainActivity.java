@@ -21,6 +21,7 @@ import org.cloud.carassistant.R;
 import org.cloud.carassistant.consts.Consts;
 import org.cloud.carassistant.ui.base.AppBaseActivity;
 import org.cloud.carassistant.ui.fragment.AboutFragment;
+import org.cloud.carassistant.ui.fragment.ChartFragment;
 import org.cloud.carassistant.ui.fragment.MainFragment;
 import org.cloud.carassistant.ui.fragment.TimelineFragment;
 import org.cloud.carassistant.utils.PgyUtil;
@@ -37,6 +38,7 @@ public class MainActivity extends AppBaseActivity {
     private MainFragment mMainFragment;
     private TimelineFragment mTimelineFragment;
     private AboutFragment mAboutFragment;
+    private ChartFragment mChartFragment;
     private DoubleClickExitHelper mDoubleClickExitHelper;
 
     private static final int REQUEST_CODE_STORAGE = 101;
@@ -113,10 +115,10 @@ public class MainActivity extends AppBaseActivity {
                         changeFragment(R.id.main_fragment_layout, mMainFragment);
                         break;
                     case R.id.tab_chart:
-                        if (null == mMainFragment) {
-                            mMainFragment = MainFragment.newInstance();
+                        if (null == mChartFragment) {
+                            mChartFragment = ChartFragment.newInstance();
                         }
-                        changeFragment(R.id.main_fragment_layout, mMainFragment);
+                        changeFragment(R.id.main_fragment_layout, mChartFragment);
                         break;
                     case R.id.tab_timeline:
                         if (null == mTimelineFragment) {

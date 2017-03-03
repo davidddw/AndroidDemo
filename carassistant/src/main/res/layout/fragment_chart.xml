@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="?attr/actionBarSize"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/margin_larger"
+        android:paddingLeft="@dimen/margin_large"
+        android:paddingRight="@dimen/margin_large"
+        android:paddingTop="@dimen/margin_larger">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/chart_consumer_label"
+                style="@style/Chart.Lable"
+                android:text="@string/chart.consumer.title"/>
+
+            <View
+                style="@style/Chart.TagDivider"
+                android:layout_alignBottom="@id/chart_consumer_label"
+                android:layout_toEndOf="@id/chart_consumer_label"
+                android:layout_toRightOf="@id/chart_consumer_label"/>
+
+            <TextView
+                android:id="@+id/chart_consumer_save"
+                style="@style/Chart.Save"/>
+
+        </RelativeLayout>
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/chart_consumer_barchart"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/chart_height"
+            android:layout_marginTop="@dimen/margin_normal"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_large">
+
+            <TextView
+                style="@style/Chart.Lable"
+                android:id="@+id/chart_percentage_lable"
+                android:text="@string/chart.percentage.title"/>
+
+            <View
+                style="@style/Chart.TagDivider"
+                android:layout_toRightOf="@id/chart_percentage_lable"
+                android:layout_toEndOf="@id/chart_percentage_lable"
+                android:layout_alignBottom="@id/chart_percentage_lable"/>
+
+            <TextView
+                style="@style/Chart.Save"
+                android:id="@+id/chart_percentage_save" />
+
+        </RelativeLayout>
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/chart_percentage_piechart"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/chart_height"/>
+
+        <LinearLayout
+            android:id="@+id/chart_percentage_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:orientation="vertical"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_large">
+
+            <TextView
+                style="@style/Chart.Lable"
+                android:id="@+id/chart_fuel_lable"
+                android:text="@string/chart.fuel.title"/>
+
+            <View
+                style="@style/Chart.TagDivider"
+                android:layout_toRightOf="@id/chart_fuel_lable"
+                android:layout_toEndOf="@id/chart_fuel_lable"
+                android:layout_alignBottom="@id/chart_fuel_lable"/>
+
+            <TextView
+                style="@style/Chart.Save"
+                android:id="@+id/chart_fuel_save" />
+        </RelativeLayout>
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chart_fuel_linechart"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/chart_height"/>
+
+        <View
+            style="@style/Chart.HorizontalDivider"
+            android:layout_marginTop="@dimen/margin_normal"/>
+
+        <LinearLayout style="@style/Chart.ItemLayout">
+
+            <View style="@style/Chart.VerticalDivider"/>
+
+            <TextView
+                style="@style/Chart.ItemLable"
+                android:text="@string/chart.fuel.min.lable"/>
+
+            <View style="@style/Chart.VerticalDivider"/>
+
+            <TextView
+                style="@style/Chart.ItemLable"
+                android:text="@string/chart.fuel.max.lable"/>
+
+            <View style="@style/Chart.VerticalDivider"/>
+        </LinearLayout>
+
+        <View style="@style/Chart.HorizontalDivider"/>
+
+        <LinearLayout style="@style/Chart.ItemLayout">
+
+            <View style="@style/Chart.VerticalDivider"/>
+
+            <TextView
+                style="@style/Chart.ItemLable.Value"
+                android:id="@+id/chart_min_money"/>
+
+            <View style="@style/Chart.VerticalDivider"/>
+
+            <TextView
+                style="@style/Chart.ItemLable.Value"
+                android:id="@+id/chart_min_oilmess"/>
+
+            <View style="@style/Chart.VerticalDivider"/>
+
+            <TextView
+                style="@style/Chart.ItemLable.Value"
+                android:id="@+id/chart_max_money"/>
+
+            <View style="@style/Chart.VerticalDivider"/>
+
+            <TextView
+                style="@style/Chart.ItemLable.Value"
+                android:id="@+id/chart_max_oilmess"/>
+
+            <View style="@style/Chart.VerticalDivider"/>
+        </LinearLayout>
+
+        <View style="@style/Chart.HorizontalDivider"/>
+
+
+    </LinearLayout>
+
+</ScrollView>

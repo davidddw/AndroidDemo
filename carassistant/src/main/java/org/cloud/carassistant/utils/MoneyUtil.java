@@ -12,6 +12,9 @@ import java.math.BigDecimal;
 
 public class MoneyUtil {
 
+    private static final int DEFAULT_SCALE         = 2;
+    private static final int DEFAULT_ROUNDING_MODE = BigDecimal.ROUND_HALF_UP;
+
     private BigDecimal mBigDecimal;
 
     private MoneyUtil() {}
@@ -84,5 +87,28 @@ public class MoneyUtil {
 
     public BigDecimal create() {
         return mBigDecimal;
+    }
+
+    public MoneyUtil add(float number) {
+        mBigDecimal = mBigDecimal.add(objectToBigDecimal(number));
+        return this;
+    }
+
+    public MoneyUtil divide(@NonNull Object number) {
+        return divide(number, DEFAULT_SCALE, DEFAULT_ROUNDING_MODE);
+    }
+
+    public MoneyUtil divide(@NonNull Object number, int scale) {
+        return divide(number, scale, DEFAULT_ROUNDING_MODE);
+    }
+
+    public MoneyUtil divide(@NonNull Object number, int scale, int roundingMode) {
+        mBigDecimal = mBigDecimal.divide(objectToBigDecimal(number), scale, roundingMode);
+        return this;
+    }
+
+    public MoneyUtil multiply(@NonNull Object number) {
+        mBigDecimal = mBigDecimal.multiply(objectToBigDecimal(number));
+        return this;
     }
 }

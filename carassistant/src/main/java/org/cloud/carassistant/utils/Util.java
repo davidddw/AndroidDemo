@@ -103,4 +103,19 @@ public class Util {
         editText.setFocusable(true);
         editText.requestFocus();
     }
+
+    public static String formatRMB(float money){
+        return format(Consts.FORMAT_RMB, money);
+    }
+
+    public static String formatPercentage(float percentage){
+        return MoneyUtil.replace(MoneyUtil.newInstance(percentage).round(2).create()) + "%";
+    }
+    public static String formatPercentage(float value, float totalValue){
+        return formatPercentage(value*100/totalValue);
+    }
+
+    public static String formatOilMess(float oilMess){
+        return format(Consts.FORMAT_OIL_MESS, oilMess);
+    }
 }

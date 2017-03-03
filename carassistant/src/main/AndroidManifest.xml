@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="org.cloud.carassistant">
 
@@ -20,9 +21,9 @@
         <activity
             android:name=".ui.activity.MainActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
-            android:screenOrientation="portrait"
             android:launchMode="singleTask"
             android:resizeableActivity="true"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -37,7 +38,6 @@
                 android:minHeight="@dimen/multi_window_min_height"
                 android:minWidth="@dimen/multi_window_min_width"/>
         </activity>
-
         <activity
             android:name=".ui.activity.AddConsumerActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
@@ -52,7 +52,23 @@
                 android:minHeight="@dimen/multi_window_min_height"
                 android:minWidth="@dimen/multi_window_min_width"/>
         </activity>
+        <activity
+            android:name=".ui.activity.OpenSourceLicensesActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:launchMode="singleTop"
+            android:resizeableActivity="true"
+            android:theme="@style/AppTheme">
+            <layout
+                android:defaultHeight="@dimen/multi_window_height"
+                android:defaultWidth="@dimen/multi_window_width"
+                android:gravity="top|end"
+                android:minHeight="@dimen/multi_window_min_height"
+                android:minWidth="@dimen/multi_window_min_width"/>
+        </activity>
 
+        <meta-data
+            android:name="PGYER_APPID"
+            android:value="fce67a1c46ac92a1d22d58c0fdf94811"/>
     </application>
 
 </manifest>

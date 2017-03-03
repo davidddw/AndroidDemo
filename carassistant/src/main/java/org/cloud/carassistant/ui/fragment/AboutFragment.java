@@ -17,6 +17,7 @@ import com.jakewharton.rxbinding.view.RxView;
 
 import org.cloud.carassistant.R;
 import org.cloud.carassistant.consts.Consts;
+import org.cloud.carassistant.ui.activity.OpenSourceLicensesActivity;
 import org.cloud.carassistant.ui.base.AppBaseFragment;
 import org.cloud.carassistant.ui.dialog.AuthorDialog;
 import org.cloud.carassistant.utils.PgyUtil;
@@ -86,7 +87,7 @@ public class AboutFragment extends AppBaseFragment {
                         getString(R.string.share_content));
                 break;
             case R.id.about_thanks:
-                //OpenSourceLicensesActivity.start(mActivity);
+                OpenSourceLicensesActivity.start(mActivity);
                 break;
         }
     }
